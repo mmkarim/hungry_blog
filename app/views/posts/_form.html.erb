@@ -1,0 +1,32 @@
+<div class="wrap">
+  <div class="contact-form">
+    <%= form_for @post do |f| %>
+      <div>
+        <span><label>Title</label></span>
+        <span><%= f.text_field :title %></span>
+      </div>
+
+      <div>
+        <span><label>Tags</label></span>
+        <span><input type="text" value="" /></span>
+      </div>
+
+      <div>
+        <span><label>Post</label></span>
+        <span>
+          <%= md_simple_editor  do %>
+             <%= f.text_area :body %>
+          <% end %>
+        </span>
+      </div>
+
+      <div>
+        <span><%= f.submit "Submit" %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+

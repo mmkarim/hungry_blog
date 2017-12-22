@@ -1,0 +1,22 @@
+<% @posts.each do |post| %>
+  <%= render partial: "posts/post", locals: {post: post} %>
+<% end %>
+
+<div class="clear"> </div>
+
+<div class="wrap">
+
+  <ul class="dc_pagination dc_paginationA dc_paginationA03">
+    <li><a href="?page=1" class="first">First</a></li>
+    <% (1..@total).each do |i| %>
+      <li><a href="?page=<%= i %>" class="<%= activate if i == @page %>" ><%= i %></a></li>
+    <% end %>
+    <li><a href="?page=<%= @total %>" class="last">Last</a></li>
+  </ul>
+  <div class="clear"> </div>
+</div>
+
+
+
+
+

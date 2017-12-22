@@ -1,0 +1,23 @@
+<% require 'github/markup' %>
+
+<div class="blog-box1">
+  <div class="blog-box-image">
+    <img src="images/pre.png" title="priview" />
+  </div>
+  <div class="blog-box-content">
+    <h5><a><%= @post.title %></a></h5>
+
+
+
+
+    <div>
+      <%= GitHub::Markup.render('README.markdown', @post.body).html_safe %>
+    </div>
+
+    <ul>
+      <li><a href="#">Lorem ipsum</a></li>
+      <li><a href="#">: 23-02-1989</a></li>
+      <li><a href="#"><span>Read more</span></a></li>
+    </ul>
+  </div>
+</div>

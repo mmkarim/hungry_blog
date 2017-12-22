@@ -1,0 +1,21 @@
+
+
+<%= form_tag({controller: "static_pages", action: "upload", method: "post"}, multipart: true) do %>
+  <%= label_tag(:image, "Image") %>
+  <%= file_field_tag(:image) %>
+  <%= submit_tag("Upload") %>
+<% end %>
+
+
+ <div class="row"> <% @images.each do |image| %>
+  <div class="col-md-3">
+    <div class="thumbnail">
+        <img src=<%= "#{root_url}#{image}" %> alt="Image" style="width:100%">
+        <div class="caption">
+          <p style="overflow-y: hidden"><small><%= "![Alt](#{root_url}#{image})" %></small></p>
+        </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+

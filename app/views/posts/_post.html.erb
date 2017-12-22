@@ -1,0 +1,15 @@
+<div class="bloger-grid">
+  <div class="blog-img">
+    <img src=<%= post[:image_url] %> title="post_image" />
+  </div>
+  <div class="bloger-content">
+    <h5><a href= <%= post[:post_url] %> ><%= post[:title] %></a></h5>
+    <p><%= post[:content] %></p>
+    <ul>
+      <li><a href="#">MKS</a></li>
+      <li><a href="#">: <%= post[:date].to_date %> </a></li>
+      <li><a href= <%= post[:post_url] %>><span>Readmore</span></a></li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>
