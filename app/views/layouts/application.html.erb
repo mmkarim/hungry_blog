@@ -3,9 +3,7 @@
   <head>
     <title>Myblog</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -26,11 +24,9 @@
     <div class="header-nav1">
       <div class="wrap">
         <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Advertise</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="current"><%= link_to "Home", root_path %></li>
+          <li><%= link_to "New Post", new_post_path %></li>
+          <li><a href="#">Contact</a></li>
         </ul>
         <div class="search-bar">
           <ul>
@@ -44,7 +40,6 @@
       <!-- content-gallery-->
     </div>
 
-
     <div class="wrap">
       <div class="about">
         <div class="bloder-content">
@@ -53,7 +48,6 @@
         <div class="clear"> </div>
       </div>
     </div>
-
 
 
     <div class="clear"> </div>
@@ -75,12 +69,12 @@
           <div class="share">
             <li><a href="#" target="_blank" title="Facebook"><span class="social fbook"> </span></a></li>
             <li><a href="#" target="_blank" title="twitter"><span class="social twitter"> </span></a></li>
-            <li><a href="#" target="_blank" title="tumblr"><span class="social tumblr"> </span></a></li><br />
+<!--             <li><a href="#" target="_blank" title="tumblr"><span class="social tumblr"> </span></a></li><br />
             <li><a href="#" target="_blank" title="delicious"><span class="social delicious"> </span></a></li>
             <li><a href="#" target="_blank" title="delicious"><span class="social delicious"> </span></a></li>
             <li><a href="#" target="_blank" title="dribbble"><span class="social dribbble"> </span></a></li>
             <li><a href="#" target="_blank" title="evernote"><span class="social evernote"> </span></a></li>
-            <li><a href="#" target="_blank" title="stumbleupon"><span class="social stumbleupon"> </span></a></li>
+            <li><a href="#" target="_blank" title="stumbleupon"><span class="social stumbleupon"> </span></a></li> -->
           </div>
         </div>
       </div>

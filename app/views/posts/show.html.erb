@@ -1,17 +1,12 @@
-<% require 'github/markup' %>
-
 <div class="blog-box1">
-  <div class="blog-box-image">
+<!--   <div class="blog-box-image">
     <img src="images/pre.png" title="priview" />
-  </div>
+  </div> -->
   <div class="blog-box-content">
-    <h5><a><%= @post.title %></a></h5>
-
-
-
+    <h1><strong><%= link_to @post.title, post_path(@post) %></strong></h1>
 
     <div>
-      <%= GitHub::Markup.render('README.markdown', @post.body).html_safe %>
+      <%= markdown(@post.body) %>
     </div>
 
     <ul>

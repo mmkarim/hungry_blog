@@ -22,7 +22,7 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'md_simple_editor'
-gem 'github-markup'
+gem 'redcarpet'
 
 
 group :development, :test do
