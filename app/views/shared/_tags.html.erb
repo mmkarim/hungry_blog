@@ -1,0 +1,7 @@
+<div class= "tags">
+  <ul>
+    <% post.tag_list.each do |tag| %>
+    <%= link_to tag, "#{root_path}?tag=#{tag}" , class: "tag label label-info" %>
+    <% end %>
+  </ul>
+</div>

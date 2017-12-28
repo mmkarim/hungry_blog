@@ -5,7 +5,18 @@
     <img src="images/pre.png" title="priview" />
   </div> -->
   <div class="blog-box-content">
-    <h1><strong><%= link_to @post.title, post_path(@post) %></strong></h1>
+    <span>
+      <h1><strong><%= link_to @post.title, post_path(@post) %></strong>
+      <small>
+          <span class="btn-group">
+              <%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
+              <%= link_to "Delete", @post, class: "btn btn-danger btn-xs", data: {method: :delete} %>
+          </span>
+      </small>
+      </h1>
+
+    </span>
+    <%= render "shared/tags", post: @post%>
 
     <div>
       <%= markdown(@post.body) %>

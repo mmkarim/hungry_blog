@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def first_image_link text
     match = text.match(/\!\[\]\((.*)\)/)
-    match[1] if match
+    match ? match[1] : image_path("default.jpg")
   end
 
   def activate

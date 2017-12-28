@@ -4,12 +4,13 @@
   </div>
   <div class="bloger-content">
     <h5><%= link_to post.title, post_path(post) %></h5>
-    <p><%= truncate( strip_tags( markdown(post.body) ), length: 350) %></p>
+    <p><%= truncate( strip_tags( markdown(post.body) ), length: 250) %></p>
+
+    <%= render "shared/tags", post: post%>
+
     <ul>
-<!--       <li><a href="#">MKS</a></li> -->
-      <li><a><%= "#{time_ago_in_words post.updated_at}" %> <%= t("ago") %></a></li>
+      <li><p><%= "#{time_ago_in_words post.updated_at}" %> <%= t("ago") %></p></li>
       <li><%= link_to t("read_more"), post_path(post) %></li>
     </ul>
   </div>
-  <div class="clear"> </div>
 </div>

@@ -7,8 +7,8 @@
       </div>
 
       <div>
-        <span><label><%= t("tags") %></label></span>
-        <span><input type="text" value="" /></span>
+        <span><label><%= t("tags") %><small> (<%= t("comma_separated") %>) </small></label></span>
+        <span><%= f.text_field :tag_list, value: f.object.tag_list.to_s %></span>
       </div>
 
       <div>

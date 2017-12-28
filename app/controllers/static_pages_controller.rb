@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
-    @posts = Post.all
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all
+    end
 
     per_page = 10
     @total = (@posts.size.to_f / per_page.to_f).ceil
