@@ -1,3 +1,5 @@
+<% provide :title, t("post") %>
+
 <div class="blog-box1">
 <!--   <div class="blog-box-image">
     <img src="images/pre.png" title="priview" />
@@ -10,9 +12,8 @@
     </div>
 
     <ul>
-      <li><a href="#">Lorem ipsum</a></li>
-      <li><a href="#">: 23-02-1989</a></li>
-      <li><a href="#"><span>Read more</span></a></li>
+      <li><a><%= "#{time_ago_in_words @post.updated_at}" %> <%= t("ago") %></a></li>
+      <li><%= link_to t("comment"), "" %></li>
     </ul>
   </div>
 </div>

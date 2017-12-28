@@ -15,4 +15,8 @@ module ApplicationHelper
   def activate
     "active"
   end
+
+  def image_markdown image_link
+    "![Alt](#{root_url}#{image_link})"
+  end
 end

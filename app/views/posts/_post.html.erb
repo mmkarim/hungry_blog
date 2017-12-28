@@ -7,8 +7,8 @@
     <p><%= truncate( strip_tags( markdown(post.body) ), length: 350) %></p>
     <ul>
 <!--       <li><a href="#">MKS</a></li> -->
-      <li><a href="#"> <%= "#{time_ago_in_words post.updated_at} ago" %> </a></li>
-      <li><%= link_to "Read more", post_path(post) %></li>
+      <li><a><%= "#{time_ago_in_words post.updated_at}" %> <%= t("ago") %></a></li>
+      <li><%= link_to t("read_more"), post_path(post) %></li>
     </ul>
   </div>
   <div class="clear"> </div>

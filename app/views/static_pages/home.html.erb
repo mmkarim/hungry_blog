@@ -1,3 +1,5 @@
+<% provide :title, t("home") %>
+
 <% @posts.each do |post| %>
   <%= render partial: "posts/post", locals: {post: post} %>
 <% end %>
@@ -5,7 +7,6 @@
 <div class="clear"> </div>
 
 <div class="wrap">
-
   <ul class="dc_pagination dc_paginationA dc_paginationA03">
     <li><a href="?page=1" class="first">First</a></li>
     <% (1..@total).each do |i| %>
