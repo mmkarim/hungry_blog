@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   friendly_id :title, use: :slugged
 
   acts_as_taggable
-  paginates_per 10
+  paginates_per 5
 end

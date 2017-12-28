@@ -19,4 +19,8 @@ module ApplicationHelper
   def image_markdown image_link
     "![](/#{image_link})"
   end
+
+  def popular_posts
+    Post.all.order(:created_at).limit 5
+  end
 end
