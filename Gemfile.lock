@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/amatsuda/kaminari.git
+  revision: 0016a9b6222847ecc4de6bf53045f78daf4de34a
+  branch: master
+  specs:
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -195,6 +213,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari!
   listen (~> 3.0.5)
   md_simple_editor
   mini_magick

@@ -24,6 +24,7 @@ gem 'mini_magick'
 gem 'md_simple_editor'
 gem 'redcarpet'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'kaminari', github: 'amatsuda/kaminari', branch: 'master'
 
 
 group :development, :test do

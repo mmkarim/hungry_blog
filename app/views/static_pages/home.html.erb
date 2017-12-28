@@ -5,15 +5,8 @@
 <% end %>
 
 <div class="clear"> </div>
-
-<div class="wrap">
-  <ul class="dc_pagination dc_paginationA dc_paginationA03">
-    <li><%= link_to 'View Answers', :query => "ruby on rails" %></li>
-    <% (1..@total).each do |i| %>
-      <li><a href="?page=<%= i %>" class="<%= activate if i == @page %>" ><%= i %></a></li>
-    <% end %>
-    <li><a href="?page=<%= @total %>" class="last">Last</a></li>
-  </ul>
+<div class="text-center">
+  <%= paginate @posts %>
   <div class="clear"> </div>
 </div>
 

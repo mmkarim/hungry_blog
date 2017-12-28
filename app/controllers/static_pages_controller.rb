@@ -1,24 +1,11 @@
 class StaticPagesController < ApplicationController
   def home
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).page params[:page]
     else
-      @posts = Post.all
+      @posts = Post.all.page params[:page]
     end
 
-    per_page = 10
-    @total = (@posts.size.to_f / per_page.to_f).ceil
-
-    @page = params[:page].try(:to_i) || 1
-
-    @start = if @page < 2 || @page > @total
-      0
-    else
-      (@page - 1) * per_page
-    end
-
-
-    @posts = @posts[@start, per_page]
   end
 
   def photos
