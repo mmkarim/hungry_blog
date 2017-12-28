@@ -4,7 +4,7 @@ module ApplicationHelper
       fenced_code_blocks: true, disable_indented_code_blocks: false, autolink: true,
       tables: true, underline: true, highlight: true)
 
-      markdown.render(text).html_safe
+    markdown.render(text).html_safe
   end
 
   def first_image_link text
@@ -13,10 +13,10 @@ module ApplicationHelper
   end
 
   def activate
-    "active"
+    "current"
   end
 
   def image_markdown image_link
-    "![Alt](#{root_url}#{image_link})"
+    "![](/#{image_link})"
   end
 end

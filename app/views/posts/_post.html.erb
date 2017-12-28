@@ -9,7 +9,7 @@
     <%= render "shared/tags", post: post%>
 
     <ul>
-      <li><p><%= "#{time_ago_in_words post.updated_at}" %> <%= t("ago") %></p></li>
+      <li><p><%= "#{time_ago_in_words post.created_at}" %> <%= t("ago") %></p></li>
       <li><%= link_to t("read_more"), post_path(post) %></li>
     </ul>
   </div>

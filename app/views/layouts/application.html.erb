@@ -12,28 +12,33 @@
       <div class="wrap">
         <!-- Start-logo-->
         <div class="logo">
-          <a href="index.html"> <img src=<%= asset_path('logo.png') %> title="logo" /></a>
+          <a href="index.html">
+            <img src=<%= asset_path('logo.png') %> title="logo" />
+          </a>
         </div>
-        <!-- End-Logo-->
-        <!-- Start-Header-nav-->
         <div class="clear"> </div>
-        <!-- End-Header-nav-->
       </div>
     </div>
 
     <div class="header-nav1">
       <div class="wrap">
         <ul>
-          <li class="current"><%= link_to t("home"), root_path %></li>
-          <li><%= link_to t("new_post"), new_post_path %></li>
-          <li><%= link_to t("uploaded_photos"), static_pages_photos_path %></li>
+          <li class=<%= activate if current_page?(root_path) %> >
+            <%= link_to t("home"), root_path %>
+          </li>
+          <li class=<%= activate if current_page?(new_post_path) %> >
+            <%= link_to t("new_post"), new_post_path %>
+          </li>
+          <li class=<%= activate if current_page?(static_pages_photos_path) %> >
+            <%= link_to t("uploaded_photos"), static_pages_photos_path %>
+          </li>
         </ul>
-        <div class="search-bar">
+<!--         <div class="search-bar">
           <ul>
             <li><input type="text"></li>
             <li><form><input type="submit" value="" /></form></li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <!-- End-Header-->
       <div class="clear"> </div>

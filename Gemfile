@@ -17,7 +17,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'carrierwave'
 gem 'mini_magick'
@@ -25,6 +24,7 @@ gem 'md_simple_editor'
 gem 'redcarpet'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'kaminari', github: 'amatsuda/kaminari', branch: 'master'
+gem 'friendly_id', '~> 5.1.0'
 
 
 group :development, :test do
@@ -37,6 +37,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'seed_dump'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
