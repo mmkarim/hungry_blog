@@ -1,22 +1,19 @@
 <% provide :title, t("post") %>
 
 <div class="blog-box1">
-<!--   <div class="blog-box-image">
-    <img src="images/pre.png" title="priview" />
-  </div> -->
   <div class="blog-box-content">
     <span>
-      <h1><strong><%= link_to @post.title, post_path(@post) %></strong>
-      <small>
-          <span class="btn-group">
-              <%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
-              <%= link_to 'Delete', post_path(@post), class: "btn btn-danger btn-xs",
-                method: :delete, data: { confirm: 'Are you sure?' } %>
-
-          </span>
-      </small>
+      <h1>
+        <strong><%= link_to @post.title, post_path(@post) %></strong>
+        <small>
+            <span class="btn-group">
+                <%= link_to t("edit"), edit_post_path(@post), class: "btn btn-primary btn-xs" %>
+                <%= link_to t("Delete"), post_path(@post),
+                  class: "btn btn-danger btn-xs",  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+            </span>
+        </small>
       </h1>
-
     </span>
     <%= render "shared/tags", post: @post%>
 

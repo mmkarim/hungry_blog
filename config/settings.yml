@@ -1,0 +1,9 @@
+post:
+  page_limit: 5
+  popular_posts_limit: 5
+  short_view_limit: 250
+tag:
+  popular_tags_limit: 15
+image:
+  fetch_regex: !ruby/regexp '/\!\[.*\]\((.*)\)/'
+  default_post_url: "default.jpg"

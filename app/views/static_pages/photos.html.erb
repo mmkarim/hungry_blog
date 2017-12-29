@@ -7,15 +7,16 @@
 <% end %>
 
 
- <div class="row"> <% @images.each do |image| %>
-  <div class="col-md-3">
-    <div class="thumbnail">
-        <img src=<%= "#{root_url}#{image}" %> style="width:100%">
-        <div class="caption">
-          <p style="overflow-y: hidden"><small><%= image_markdown(image) %></small></p>
-        </div>
+<div class="row">
+  <% @images.each do |image| %>
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <img src=<%= "#{root_url}#{image}" %> style="width:100%">
+          <div class="caption">
+            <p style="overflow-y: hidden"><small><%= image_markdown(image) %></small></p>
+          </div>
+      </div>
     </div>
-  </div>
   <% end %>
 </div>
 

@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   acts_as_taggable
   acts_as_paranoid
 
-  paginates_per 5
+  paginates_per Settings.post.page_limit
 end

@@ -4,7 +4,10 @@
   </div>
   <div class="bloger-content">
     <h5><%= link_to post.title, post_path(post) %></h5>
-    <p><%= truncate( strip_tags( markdown(post.body) ), length: 250) %></p>
+    <p>
+      <%= truncate(strip_tags(markdown(post.body)),
+        length: Settings.post.short_view_limit) %>
+    </p>
 
     <%= render "shared/tags", post: post%>
 

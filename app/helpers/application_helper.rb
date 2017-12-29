@@ -8,8 +8,8 @@ module ApplicationHelper
   end
 
   def first_image_link text
-    match = text.match(/\!\[.*\]\((.*)\)/)
-    match ? match[1] : image_path("default.jpg")
+    match = text.match Settings.image.fetch_regex
+    match ? match[1] : image_path(Settings.image.default_post_url)
   end
 
   def activate
@@ -21,10 +21,10 @@ module ApplicationHelper
   end
 
   def popular_posts
-    Post.all.order(created_at: :desc).limit 5
+    Post.all.order(created_at: :desc).limit Settings.post.popular_posts_limit
   end
 
   def popular_tags
-    ActsAsTaggableOn::Tag.most_used(15)
+    ActsAsTaggableOn::Tag.most_used Settings.tag.popular_tags_limit
   end
 end
