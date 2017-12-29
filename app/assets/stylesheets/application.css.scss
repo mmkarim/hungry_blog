@@ -10,10 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
  *= require_self
  *= require md_simple_editor
-
+ *= require_tree .
  */
 
 
@@ -1088,4 +1088,8 @@
  .footerlinks {
      width: 100%;
  }
+ }
+
+ #md-editor #md-text textarea {
+  height: 600px;
  }
