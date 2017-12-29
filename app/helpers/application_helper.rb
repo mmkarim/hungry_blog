@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def first_image_link text
-    match = text.match(/\!\[\]\((.*)\)/)
+    match = text.match(/\!\[.*\]\((.*)\)/)
     match ? match[1] : image_path("default.jpg")
   end
 
@@ -21,6 +21,6 @@ module ApplicationHelper
   end
 
   def popular_posts
-    Post.all.order(:created_at).limit 5
+    Post.all.order(created_at: :desc).limit 5
   end
 end
