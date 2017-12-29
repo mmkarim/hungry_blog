@@ -25,6 +25,7 @@ gem 'redcarpet'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'kaminari', github: 'amatsuda/kaminari', branch: 'master'
 gem 'friendly_id', '~> 5.1.0'
+gem 'acts_as_paranoid', '~> 0.5.0'
 
 
 group :development, :test do
