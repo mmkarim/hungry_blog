@@ -1,6 +1,6 @@
 <% provide :title, t("uploaded_photos") %>
 
-<%= form_tag({controller: "static_pages", action: "upload", method: "post"}, multipart: true) do %>
+<%= form_tag({controller: :photos, action: :upload, method: :posts}, multipart: true) do %>
   <%= label_tag(:image, t("image")) %>
   <%= file_field_tag(:image) %>
   <%= submit_tag("Upload") %>
@@ -19,4 +19,3 @@
     </div>
   <% end %>
 </div>
-

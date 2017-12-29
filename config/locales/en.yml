@@ -1,7 +1,7 @@
 en:
   app_name: "HungryBlog"
   home: "Home"
-  uploaded_photos: "Uploaded Photos"
+  photos: "Photos"
   new_post: "New Post"
   title: "Title"
   tags: "Tags"

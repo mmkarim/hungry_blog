@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'static_pages/home'
-  get 'static_pages/photos'
-  post 'static_pages/upload'
+  get 'photos/index'
+  post 'photos/upload'
 end

@@ -5,18 +5,5 @@ class StaticPagesController < ApplicationController
     else
       @posts = Post.all.order(created_at: :desc).page params[:page]
     end
-
-  end
-
-  def photos
-    @images = Dir.glob("public/uploads/*.*").map {|i| i.remove("public/")}
-  end
-
-  def upload
-    uploader = ImageUploader.new
-    image = params[:image]
-    uploader.store!(image)
-
-    redirect_to '/static_pages/photos'
   end
 end

@@ -29,8 +29,8 @@
           <li class=<%= activate if current_page?(new_post_path) %> >
             <%= link_to t("new_post"), new_post_path %>
           </li>
-          <li class=<%= activate if current_page?(static_pages_photos_path) %> >
-            <%= link_to t("uploaded_photos"), static_pages_photos_path %>
+          <li class=<%= activate if current_page?(photos_index_path) %> >
+            <%= link_to t("photos"), photos_index_path %>
           </li>
         </ul>
 <!--         <div class="search-bar">
