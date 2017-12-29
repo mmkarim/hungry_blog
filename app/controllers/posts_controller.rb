@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
+  before_action :find_post, only: [:edit, :update, :show, :destroy]
 
   def show
   end
@@ -22,6 +22,11 @@ class PostsController < ApplicationController
     if @post.update_attributes(post_params)
       redirect_to post_path(@post)
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_url
   end
 
   private

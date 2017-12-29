@@ -3,7 +3,7 @@
 <div class="services-sidebar">
   <h4><%= t("popular_tags") %></h4>
   <ul>
-    <% ActsAsTaggableOn::Tag.most_used(10).each do |tag| %>
+    <% popular_tags.each do |tag| %>
       <%= link_to tag, "#{root_path}?tag=#{tag}" , class: "tag label label-info" %>
     <% end %>
   </ul><br>

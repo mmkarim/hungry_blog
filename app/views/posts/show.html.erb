@@ -10,7 +10,9 @@
       <small>
           <span class="btn-group">
               <%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
-              <%= link_to "Delete", @post, class: "btn btn-danger btn-xs", data: {method: :delete} %>
+              <%= link_to 'Delete', post_path(@post), class: "btn btn-danger btn-xs",
+                method: :delete, data: { confirm: 'Are you sure?' } %>
+
           </span>
       </small>
       </h1>

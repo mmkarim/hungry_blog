@@ -23,4 +23,8 @@ module ApplicationHelper
   def popular_posts
     Post.all.order(created_at: :desc).limit 5
   end
+
+  def popular_tags
+    ActsAsTaggableOn::Tag.most_used(15)
+  end
 end
