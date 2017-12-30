@@ -29,6 +29,7 @@ gem 'acts_as_paranoid', '~> 0.5.0'
 gem 'config'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'devise'
 
 
 group :development, :test do

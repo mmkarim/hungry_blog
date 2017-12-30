@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @images = Dir.glob("public/uploads/*.*").map {|i| i.remove("public/")}
   end
