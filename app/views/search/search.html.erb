@@ -19,4 +19,10 @@
   <%= render partial: "shared/post_result", locals: {post: post_result} %>
 <% end %>
 
+<div class="clear"> </div>
+<div class="text-center">
+  <%= paginate(@post_results) unless @post_results.empty? %>
+  <div class="clear"> </div>
+</div>
+
 
