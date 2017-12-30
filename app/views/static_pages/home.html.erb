@@ -1,26 +1,8 @@
 <% provide :title, t("home") %>
-
-<div class="services-sidebar">
-  <h4><%= t("popular_tags") %></h4>
-  <ul>
-    <% popular_tags.each do |tag| %>
-      <%= link_to tag, "#{root_path}?tag=#{tag}" , class: "tag label label-info" %>
-    <% end %>
-  </ul><br>
-  <h4><%= t("popular_posts") %></h4>
-  <ul>
-    <% popular_posts.each do |post| %>
-      <li><%= link_to post.title, post_path(post) %></li>
-    <% end %>
-  </ul>
-</div>
+<%= render partial: "shared/sidebar" %>
 
 <% @posts.each do |post| %>
   <%= render partial: "posts/post", locals: {post: post} %>
 <% end %>
 
-<div class="clear"> </div>
-<div class="text-center">
-  <%= paginate @posts %>
-  <div class="clear"> </div>
-</div>
+<%= render partial: "shared/paginate", locals: {results: @posts} %>

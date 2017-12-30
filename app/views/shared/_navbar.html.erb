@@ -1,0 +1,26 @@
+<div class="header-nav1">
+  <div class="wrap">
+    <ul>
+      <li class=<%= activate if current_page?(root_path) %> >
+        <%= link_to t("home"), root_path %>
+      </li>
+      <li class=<%= activate if current_page?(new_post_path) %> >
+        <%= link_to t("new_post"), new_post_path %>
+      </li>
+      <li class=<%= activate if current_page?(photos_index_path) %> >
+        <%= link_to t("photos"), photos_index_path %>
+      </li>
+    </ul>
+
+    <div class="search-bar">
+      <ul>
+        <%= form_tag("/search", method: "get") do %>
+        <li><%= text_field_tag :q, params[:q] %></li>
+        <li><%= submit_tag "", name: nil %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"> </div>
+</div>

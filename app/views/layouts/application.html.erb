@@ -8,47 +8,8 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="wrap">
-        <!-- Start-logo-->
-        <div class="logo">
-          <a href=<%= root_path %>>
-            <img src=<%= asset_path('logo.png') %> title="logo" />
-          </a>
-        </div>
-        <div class="clear"> </div>
-      </div>
-    </div>
-
-    <div class="header-nav1">
-      <div class="wrap">
-        <ul>
-          <li class=<%= activate if current_page?(root_path) %> >
-            <%= link_to t("home"), root_path %>
-          </li>
-          <li class=<%= activate if current_page?(new_post_path) %> >
-            <%= link_to t("new_post"), new_post_path %>
-          </li>
-          <li class=<%= activate if current_page?(photos_index_path) %> >
-            <%= link_to t("photos"), photos_index_path %>
-          </li>
-        </ul>
-
-        <div class="search-bar">
-          <ul>
-            <%= form_tag("/search", method: "get") do %>
-            <li><%= text_field_tag :q, params[:q] %></li>
-            <li><%= submit_tag "", name: nil %>
-            </li>
-            <% end %>
-          </ul>
-        </div>
-
-      </div>
-      <!-- End-Header-->
-      <div class="clear"> </div>
-      <!-- content-gallery-->
-    </div>
+    <%= render "shared/header" %>
+    <%= render "shared/navbar" %>
 
     <div class="wrap">
       <div class="about">
@@ -62,25 +23,7 @@
     <div class="clear"> </div>
     <div class="clear"> </div>
 
-    <div class="footer">
-      <div class="wrap">
-        <h3>SAY HELLO</h3>
-        <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Vestibulum ut tortor urnati dunt
-
-          dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultri dolore cie
-
-          lorem ipsum commete.
-        </p>
-        <div class="footerlinks">
-          <div class="share">
-            <li><a href="#" target="_blank" title="Facebook"><span class="social fbook"> </span></a></li>
-            <li><a href="#" target="_blank" title="twitter"><span class="social twitter"> </span></a></li>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer1">
-      <!-- <p class="link"><span>© 2013 pro_blog. All rights Reserved | Designed by&nbsp; <a href="http://w3layouts.com/"> W3Layouts</a> </span></p> -->
-    </div>
+    <%= render "shared/footer" %>
+    <%= render "shared/foot_link" %>
   </body>
 </html>

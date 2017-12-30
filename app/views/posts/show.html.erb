@@ -15,6 +15,7 @@
         </small>
       </h1>
     </span>
+
     <%= render "shared/tags", post: @post%>
 
     <div>
@@ -22,7 +23,11 @@
     </div>
 
     <ul>
-      <li><a><%= "#{time_ago_in_words @post.updated_at}" %> <%= t("ago") %></a></li>
+      <li>
+        <a>
+          <%= "#{time_ago_in_words @post.updated_at}" %> <%= t("ago") %>
+        </a>
+      </li>
       <li><%= link_to t("comment"), "" %></li>
     </ul>
   </div>

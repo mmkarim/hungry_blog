@@ -1,28 +1,9 @@
 <% provide :title, t("search") %>
 
-<div class="services-sidebar">
-  <h4><%= t("popular_tags") %></h4>
-  <ul>
-    <% popular_tags.each do |tag| %>
-      <%= link_to tag, "#{root_path}?tag=#{tag}" , class: "tag label label-info" %>
-    <% end %>
-  </ul><br>
-  <h4><%= t("popular_posts") %></h4>
-  <ul>
-    <% popular_posts.each do |post| %>
-      <li><%= link_to post.title, post_path(post) %></li>
-    <% end %>
-  </ul>
-</div>
+<%= render partial: "shared/sidebar" %>
 
 <% @post_results.each do |post_result| %>
   <%= render partial: "shared/post_result", locals: {post: post_result} %>
 <% end %>
 
-<div class="clear"> </div>
-<div class="text-center">
-  <%= paginate(@post_results) unless @post_results.empty? %>
-  <div class="clear"> </div>
-</div>
-
-
+<%= render partial: "shared/paginate", locals: {results: @post_results} %>
