@@ -15,9 +15,8 @@
     <div class="search-bar">
       <ul>
         <%= form_tag("/search", method: "get") do %>
-        <li><%= text_field_tag :q, params[:q] %></li>
-        <li><%= submit_tag "", name: nil %>
-        </li>
+          <li><%= text_field_tag :q, params[:q] %></li>
+          <li><%= submit_tag "", name: nil %></li>
         <% end %>
       </ul>
     </div>
