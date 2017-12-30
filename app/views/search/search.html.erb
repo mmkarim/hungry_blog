@@ -2,8 +2,12 @@
 
 <%= render partial: "shared/sidebar" %>
 
-<% @post_results.each do |post_result| %>
-  <%= render partial: "shared/post_result", locals: {post: post_result} %>
+<% unless @post_results.empty? %>
+  <% @post_results.each do |post_result| %>
+    <%= render partial: "shared/post_result", locals: {post: post_result} %>
+  <% end %>
+<% else %>
+  <h3 class="text-center"><%= t("no_result_found") %></h3>
 <% end %>
 
 <%= render partial: "shared/paginate", locals: {results: @post_results} %>
