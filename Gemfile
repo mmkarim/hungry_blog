@@ -27,6 +27,8 @@ gem 'kaminari', github: 'amatsuda/kaminari', branch: 'master'
 gem 'friendly_id', '~> 5.1.0'
 gem 'acts_as_paranoid', '~> 0.5.0'
 gem 'config'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 
 group :development, :test do

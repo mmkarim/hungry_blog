@@ -88,8 +88,23 @@ GEM
       deep_merge (~> 1.1.1)
     crass (1.0.3)
     deep_merge (1.1.1)
+    elasticsearch (5.0.4)
+      elasticsearch-api (= 5.0.4)
+      elasticsearch-transport (= 5.0.4)
+    elasticsearch-api (5.0.4)
+      multi_json
+    elasticsearch-model (5.0.2)
+      activesupport (> 3)
+      elasticsearch (~> 5)
+      hashie
+    elasticsearch-rails (5.0.2)
+    elasticsearch-transport (5.0.4)
+      faraday
+      multi_json
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.13.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
@@ -97,6 +112,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    hashie (3.5.7)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -127,6 +143,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multipart-post (2.0.0)
     mysql2 (0.4.10)
     nio4r (2.1.0)
     nokogiri (1.8.1)
@@ -222,6 +239,8 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   config
+  elasticsearch-model
+  elasticsearch-rails
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails

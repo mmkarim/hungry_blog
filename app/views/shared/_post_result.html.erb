@@ -1,0 +1,21 @@
+<div class="bloger-grid">
+  <div class="blog-img">
+    <img src=<%= first_image_link post.body %> title="post_image" />
+  </div>
+  <div class="bloger-content">
+    <h5><%= link_to post.try(:highlight).try(:title) ? post.highlight.title[0].html_safe : post.title, controller: "posts", action: "show", id: post.id %></h5>
+    <p>
+      <% if post.try(:highlight).try(:body) %>
+        <% post.highlight.body[0, Settings.es.highlight_limit].each do |snippet| %>
+         <%= snippet.html_safe %>...&nbsp&nbsp
+        <% end %>
+      <% else %>
+        <%= truncate(strip_tags(markdown(post.body)),
+          length: Settings.post.short_view_limit) %>
+      <% end %>
+    </p>
+
+    <p><%= "#{time_ago_in_words post.created_at}" %> <%= t("ago") %></p>
+  </div>
+</div>
+

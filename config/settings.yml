@@ -7,3 +7,5 @@ tag:
 image:
   fetch_regex: !ruby/regexp '/\!\[.*\]\((.*)\)/'
   default_post_url: "default.jpg"
+es:
+  highlight_limit: 4
