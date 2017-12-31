@@ -27,4 +27,8 @@ module ApplicationHelper
   def popular_tags
     ActsAsTaggableOn::Tag.most_used Settings.tag.popular_tags_limit
   end
+
+  def carousel_quotes
+    Quote.all.limit(4).order(created_at: :desc)
+  end
 end
