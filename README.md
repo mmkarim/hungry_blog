@@ -1,24 +1,33 @@
-# README
+# Hungry Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A blog project implemented with Ruby on Rails, PostgreSql.
 
-Things you may want to cover:
+### Existing feautures are,
 
-* Ruby version
+* Single admin signup and signin
 
-* System dependencies
+* Markdown text editor
 
-* Configuration
+* Pretty Url
 
-* Database creation
+* Soft delete
 
-* Database initialization
+* Tagging option
 
-* How to run the test suite
+* Image upload
 
-* Services (job queues, cache servers, search engines, etc.)
+* Elastic-Search
 
-* Deployment instructions
+### Upcoming features are,
 
-* ...
+* Caching
+
+* Google analytics
+
+* SEO
+
+* Comment and Subscribe option
+
+* React for dynamic interactions
+
+* ....
