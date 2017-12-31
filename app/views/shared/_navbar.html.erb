@@ -18,7 +18,6 @@
         <li class=<%= activate if current_page?(photos_index_path) %> >
           <%= link_to t("photos"), photos_index_path %>
         </li>
-
         <li class=<%= activate if current_page?(photos_index_path) %> >
           <%= link_to t("logout"), destroy_admin_session_path, method: :delete %>
         </li>
