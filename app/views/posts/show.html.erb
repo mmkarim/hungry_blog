@@ -5,14 +5,16 @@
     <span>
       <h1>
         <strong><%= link_to @post.title, post_path(@post) %></strong>
-        <small>
-            <span class="btn-group">
-                <%= link_to t("edit"), edit_post_path(@post), class: "btn btn-primary btn-xs" %>
-                <%= link_to t("Delete"), post_path(@post),
-                  class: "btn btn-danger btn-xs",  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-            </span>
-        </small>
+        <% if admin_signed_in? %>
+          <small>
+              <span class="btn-group">
+                  <%= link_to t("edit"), edit_post_path(@post), class: "btn btn-primary btn-xs" %>
+                  <%= link_to t("Delete"), post_path(@post),
+                    class: "btn btn-danger btn-xs",  method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+              </span>
+          </small>
+        <% end %>
       </h1>
     </span>
 
