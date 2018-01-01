@@ -18,11 +18,11 @@ A blog project implemented with Ruby on Rails, PostgreSql.
 
 * Elastic-Search
 
+* Google analytics
+
 ### Upcoming features are,
 
 * Caching
-
-* Google analytics
 
 * SEO
 

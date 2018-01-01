@@ -30,6 +30,7 @@ gem 'config'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'devise'
+gem 'google-analytics-rails', '1.1.1'
 
 
 group :development, :test do
