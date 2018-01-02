@@ -5,6 +5,10 @@ class Post < ApplicationRecord
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
+  has_many :comments, dependent: :delete_all
+
+  validates :title, presence: true
+
   friendly_id :title, use: :slugged
 
   acts_as_taggable
