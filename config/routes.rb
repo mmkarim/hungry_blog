@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admins, controllers: { registrations: "registrations"}
-  resources :posts
+
+  resources :posts do
+  resources :comments, only: [:index, :create, :destroy]
+end
 
   root 'static_pages#home'
   get 'home', to: 'static_pages#home'
