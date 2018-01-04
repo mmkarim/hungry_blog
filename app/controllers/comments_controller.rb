@@ -8,8 +8,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.create!(comment_params)
-    render json: {id: comment.id, email: comment.email, text: comment.text}
+    comment = Comment.new(comment_params)
+    if comment.save
+      respond_with comment
+    else
+      respond_with(comment, status: :unprocessable_entity)
+
+    end
   end
 
   def destroy

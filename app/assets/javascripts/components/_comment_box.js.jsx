@@ -13,19 +13,19 @@ var CommentBox = React.createClass({
     this.setState({comments: this.state.comments.concat(comment)});
   },
 
-  handleDelete(comment_id) {
+  handleDelete(commentId) {
     $.ajax({
-        url: `/comments/${comment_id}`,
+        url: `/comments/${commentId}`,
         type: 'DELETE',
         success:() => {
-           this.removeComment(comment_id);
+           this.removeComment(commentId);
         }
     });
   },
 
-  removeComment(comment_id) {
+  removeComment(commentId) {
       var comments = this.state.comments.filter((comment) => {
-          return comment.id != comment_id;
+          return comment.id != commentId;
       });
 
     this.setState({ comments: comments });
