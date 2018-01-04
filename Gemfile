@@ -31,6 +31,8 @@ gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'devise'
 gem 'google-analytics-rails', '1.1.1'
+gem 'react-rails'
+gem 'responders'
 
 
 group :development, :test do

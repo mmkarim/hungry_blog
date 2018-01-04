@@ -14,4 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require md_simple_editor
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .

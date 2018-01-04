@@ -19,13 +19,11 @@
     </span>
 
     <%= render "shared/tags", post: @post%>
+    <h4><small><%= "#{time_ago_in_words @post.updated_at}" %> <%= t("ago") %> </small></h4>
 
     <div>
       <%= markdown(@post.body) %>
     </div>
-    <br>
-
-    <%= "#{time_ago_in_words @post.updated_at}" %> <%= t("ago") %>
   </div>
 </div>
 

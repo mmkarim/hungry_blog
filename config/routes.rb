@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins, controllers: { registrations: "registrations"}
 
-  resources :posts
+  resources :posts, except: :index
   resources :comments, only: [:index, :create, :destroy]
 
   root 'static_pages#home'
