@@ -35,7 +35,7 @@ var CommentBox = React.createClass({
     return (
       <div>
         <AllComments comments={this.state.comments} handleDelete={this.handleDelete}/>
-        <CommentForm handleSubmit={this.handleSubmit} post_id={this.props.post_id} />
+        <CommentForm handleSubmit={this.handleSubmit} errors={this.state.errors} post_id={this.props.post_id} />
       </div>
     )
   }
