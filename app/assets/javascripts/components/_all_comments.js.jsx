@@ -13,7 +13,7 @@ var AllComments = React.createClass({
                   <blockquote>
                     <h5><strong>{comment.email}</strong></h5>
                     <p className="text-muted">{comment.text}</p>
-                    <p className="small">{comment.time}</p>
+                    <p className="small">{comment.time} ago</p>
                   </blockquote>
                 </div>
             </div>

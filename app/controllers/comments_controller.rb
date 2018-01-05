@@ -1,20 +1,18 @@
 class CommentsController < ApplicationController
-  include ActionView::Helpers::DateHelper
   respond_to :json
 
   before_action :find_post, only: [:index]
 
   def index
-    respond_with @post.comments.map{|c| c.attributes.merge(time: time_ago_in_words(c.created_at))}
+    respond_with @post.comments.map{|c| c.add_pretty_time}
   end
 
   def create
     comment = Comment.new(comment_params)
     if comment.save
-      respond_with comment
+      respond_with(comment.add_pretty_time, location: comment)
     else
       respond_with(comment, status: :unprocessable_entity)
-
     end
   end
 
