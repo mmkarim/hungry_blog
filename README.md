@@ -1,14 +1,18 @@
 # Hungry Blog
 
-A blog project implemented with Ruby on Rails, PostgreSql.
+A blog project implemented with Ruby on Rails, React, PostgreSql, Elastic-search etc.
 
 Live demo login: https://hungryblog.herokuapp.com/admins/sign_in (Elastic-Search disabled)
 
-Id: admin@crm.com Pass: 123456
+Id: admin@crm.com
+
+Pass: 123456
 
 ### Existing feautures are,
 
 * Single admin signup and signin
+
+* Used React for a dynamic comment box with validation
 
 * Markdown text editor
 
@@ -30,8 +34,6 @@ Id: admin@crm.com Pass: 123456
 
 * SEO
 
-* Comment and Subscribe option
-
-* React for dynamic interactions
+* Subscribe option
 
 * ....
