@@ -1,10 +1,11 @@
 class CommentsController < ApplicationController
+  include ActionView::Helpers::DateHelper
   respond_to :json
 
   before_action :find_post, only: [:index]
 
   def index
-    respond_with @post.comments
+    respond_with @post.comments.map{|c| c.attributes.merge(time: time_ago_in_words(c.created_at))}
   end
 
   def create

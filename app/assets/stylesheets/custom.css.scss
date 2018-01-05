@@ -35,24 +35,30 @@ em {
 
 /* Testimonials */
 .testimonials blockquote {
-    background: #f8f1f1 none repeat scroll 0 0;
-    border: medium none;
-    color: #666;
-    display: block;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 15px;
-    position: relative;
+  background: #f8f1f1 none repeat scroll 0 0;
+  border: medium none;
+  color: #666;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 15px;
+  position: relative;
+
 }
+
+.testimonials blockquote .small {
+  text-align: right;
+}
+
 .testimonials blockquote::before {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
   right: 0;
   bottom: 0;
   content: " ";
   display: block;
   position: absolute;
-    border-bottom: 20px solid #fff;
+  border-bottom: 20px solid #fff;
   border-right: 0 solid transparent;
   border-left: 15px solid transparent;
   border-left-style: inset; /*FF fixes*/

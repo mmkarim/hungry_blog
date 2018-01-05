@@ -1,8 +1,11 @@
 class Comment < ApplicationRecord
   belongs_to :post
 
-  validates :email, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: {maximum: 255},
+            format: {with: VALID_EMAIL_REGEX}
   validates :text, presence: true
+
 
   acts_as_paranoid
 end

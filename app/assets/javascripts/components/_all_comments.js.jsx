@@ -13,12 +13,13 @@ var AllComments = React.createClass({
                   <blockquote>
                     <h5><strong>{comment.email}</strong></h5>
                     <p className="text-muted">{comment.text}</p>
+                    <p className="small">{comment.time}</p>
                   </blockquote>
                 </div>
             </div>
           </div>
           <div className="col-sm-2">
-          <button onClick={this.handleDelete.bind(this, comment.id)} className="btn btn-danger btn-xs">Delete</button>
+           <button onClick={this.handleDelete.bind(this, comment.id)} className="btn btn-danger btn-xs">Delete</button>
           </div>
         </div>
       )
