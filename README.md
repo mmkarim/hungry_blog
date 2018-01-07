@@ -14,6 +14,8 @@ Pass: 123456
 
 * Used React for a dynamic comment box with validation
 
+* JWT authentication between React and Rails
+
 * Markdown text editor
 
 * Pretty Url
