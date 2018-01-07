@@ -1,4 +1,5 @@
 require 'jwt'
+
 class Auth
   ALGORITHM = 'HS256'
 
