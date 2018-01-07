@@ -17,16 +17,21 @@ var CommentBox = React.createClass({
     $.ajax({
         url: `/comments/${commentId}`,
         type: 'DELETE',
-        success:() => {
-           this.removeComment(commentId);
+        data: {jwt: this.props.jwt},
+        dataType: "json",
+        success:(response) => {
+          this.removeComment(commentId);
+        },
+        error:(response) => {
+          alert("Authorization Failed!");
         }
     });
   },
 
   removeComment(commentId) {
-      var comments = this.state.comments.filter((comment) => {
-          return comment.id != commentId;
-      });
+    var comments = this.state.comments.filter((comment) => {
+      return comment.id != commentId;
+    });
 
     this.setState({ comments: comments });
   },
@@ -34,8 +39,15 @@ var CommentBox = React.createClass({
   render() {
     return (
       <div>
-        <AllComments comments={this.state.comments} handleDelete={this.handleDelete}/>
-        <CommentForm handleSubmit={this.handleSubmit} errors={this.state.errors} post_id={this.props.post_id} />
+        <AllComments
+          comments={this.state.comments}
+          handleDelete={this.handleDelete}
+          jwt={this.props.jwt} />
+
+        <CommentForm
+          handleSubmit={this.handleSubmit}
+          errors={this.state.errors}
+          post_id={this.props.post_id} />
       </div>
     )
   }

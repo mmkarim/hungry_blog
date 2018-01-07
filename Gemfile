@@ -33,6 +33,7 @@ gem 'devise'
 gem 'google-analytics-rails', '1.1.1'
 gem 'react-rails'
 gem 'responders'
+gem 'jwt'
 
 
 group :development, :test do

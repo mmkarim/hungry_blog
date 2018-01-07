@@ -31,4 +31,8 @@ module ApplicationHelper
   def carousel_quotes
     Quote.all.limit(4).order(created_at: :desc)
   end
+
+  def generate_jwt
+    admin_signed_in? ? Auth.encode({email: current_admin.email}) : nil
+  end
 end

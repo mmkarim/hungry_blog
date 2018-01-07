@@ -3,6 +3,20 @@ var AllComments = React.createClass({
     this.props.handleDelete(commentId)
   },
 
+  deleteButton(commentId) {
+    if(!!this.props.jwt) {
+      return (
+        <button
+          onClick={this.handleDelete.bind(this, commentId)}
+          className="btn btn-danger btn-xs">
+            Delete
+        </button>
+      )
+    } else {
+      return null;
+    }
+  },
+
   render() {
     var comments = this.props.comments.map((comment) => {
       return(
@@ -19,7 +33,7 @@ var AllComments = React.createClass({
             </div>
           </div>
           <div className="col-sm-2">
-           <button onClick={this.handleDelete.bind(this, comment.id)} className="btn btn-danger btn-xs">Delete</button>
+            {this.deleteButton(comment.id)}
           </div>
         </div>
       )

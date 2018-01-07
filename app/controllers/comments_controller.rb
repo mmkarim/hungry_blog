@@ -17,7 +17,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    respond_with Comment.destroy(params[:id])
+    if valid_jwt? params[:jwt]
+      respond_with Comment.destroy(params[:id])
+    else
+      render json: "", status: :unprocessable_entity
+    end
   end
 
   private
