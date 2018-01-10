@@ -16,6 +16,8 @@ class Post < ApplicationRecord
 
   paginates_per Settings.post.page_limit
 
+  scope :with_tags, -> { includes(:tags).order(created_at: :desc) }
+
   def self.search(query)
     __elasticsearch__.search(
       {
