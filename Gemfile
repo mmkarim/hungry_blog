@@ -50,6 +50,7 @@ group :development do
   gem 'traceroute'
   gem 'rack-mini-profiler'
   gem 'bullet'
+  gem 'brakeman', :require => false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
