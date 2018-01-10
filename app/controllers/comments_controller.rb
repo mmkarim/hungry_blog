@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  include JwtHelper
+
   respond_to :json
 
   before_action :find_post, only: [:index]
