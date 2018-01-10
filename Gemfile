@@ -49,6 +49,7 @@ group :development do
   gem 'seed_dump'
   gem 'traceroute'
   gem 'rack-mini-profiler'
+  gem 'bullet'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
